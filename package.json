@@ -26,12 +26,16 @@
     "semantic-ui-react": "^0.64.7",
     "sendgrid": "^4.7.1",
     "superagent": "^3.4.1",
-    "validator": "^6.2.1"
+    "validator": "^6.2.1",
+    "snyk": "^1.316.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "npm --prefix ./server test && react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
-  }
+    "eject": "react-scripts eject",
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
